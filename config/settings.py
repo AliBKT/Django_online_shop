@@ -179,4 +179,15 @@ LOGIN_REDIRECT_URL = 'home'
 # Logout url
 LOGOUT_REDIRECT_URL = 'home'
 
+# ---------------------------
+# Email setting
+# By console
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# By your email address
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = "smtp.gmail.com"
+# EMAIL_USE_TLS = True
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = "youremail@yourdomain.com"
+# EMAIL_HOST_PASSWORD = "your_password"
