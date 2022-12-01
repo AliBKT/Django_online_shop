@@ -1,0 +1,13 @@
+{% extends "_base.html" %}
+
+{% block pagetitle %}
+جزییات محصول {{ Product.id }}
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-2">
+        <h3>{{ Product.title }}</h3>
+        <p>{{ Product.description }}</p>
+        <span>{{ Product.price }}</span>
+    </div>
+{% endblock %}
