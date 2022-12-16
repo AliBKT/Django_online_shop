@@ -1,8 +1,11 @@
 # Import from django library
+from abc import ABC
+
 from django.shortcuts import render
 from django.views import generic
 from django.shortcuts import get_object_or_404
-
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 # Import from my files
 from .forms import CommentForm
