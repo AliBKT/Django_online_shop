@@ -10,7 +10,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 # Import from my files
 from .forms import CommentForm
 from .models import Product, Comment
-
+from .comment.filter import check_comment
 
 # Create your views here.
 
@@ -39,6 +39,7 @@ class CommentCreateView(generic.CreateView):
     def form_valid(self, form):
         object_to_db = form.save(commit=False)
         object_to_db.author = self.request.user
+        object_to_db.active = check_comment(object_to_db.body)
 
         product_id = int(self.kwargs['product_id'])
         product = get_object_or_404(Product, id=product_id)
