@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-23 11:19-0500\n"
+"POT-Creation-Date: 2022-12-24 01:17-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,3 +57,11 @@ msgstr "ویژگی ها"
 #: templates/products/DetailProduct.html:76
 msgid "comments"
 msgstr "نظرات"
+
+#: views.py:46
+msgid "Your comment have inappropriate words"
+msgstr "نظر شما حاوی کلمات ناشایست است!"
+
+#: views.py:48
+msgid "Your comment has been registered successfully"
+msgstr "نظر شما به موفقیت ثبت شد."

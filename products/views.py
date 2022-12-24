@@ -1,11 +1,12 @@
 # Import from django library
-from abc import ABC
 
 from django.shortcuts import render
 from django.views import generic
 from django.shortcuts import get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib import messages
+from django.utils.translation import gettext_lazy as _
 
 # Import from my files
 from .forms import CommentForm
@@ -41,6 +42,11 @@ class CommentCreateView(generic.CreateView):
         object_to_db.author = self.request.user
         object_to_db.active = check_comment(object_to_db.body)
 
+        if object_to_db.active == False :
+            messages.error(self.request, _('Your comment have inappropriate words'))
+        else :
+            messages.success(self.request, _('Your comment has been registered successfully'))
+        
         product_id = int(self.kwargs['product_id'])
         product = get_object_or_404(Product, id=product_id)
 

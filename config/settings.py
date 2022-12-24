@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+from django.contrib.messages import constants
 from pathlib import Path
 from environs import Env
 import os
@@ -196,3 +197,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # EMAIL_PORT = 587
 # EMAIL_HOST_USER = "youremail@yourdomain.com"
 # EMAIL_HOST_PASSWORD = "your_password"
+
+# For django messages tags 
+MESSAGE_TAGS = {
+    constants.ERROR : 'danger'
+}
