@@ -53,7 +53,8 @@ INSTALLED_APPS = [
     # My installed app
     'accounts.apps.AccountsConfig',
     'pages.apps.PagesConfig',
-    'products.apps.ProductsConfig'
+    'products.apps.ProductsConfig',
+    'cart.apps.CartConfig',
 
 ]
 
