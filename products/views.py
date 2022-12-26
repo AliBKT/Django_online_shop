@@ -12,6 +12,7 @@ from django.utils.translation import gettext_lazy as _
 from .forms import CommentForm
 from .models import Product, Comment
 from .comment.filter import check_comment
+from cart.forms import AddCartProductForm
 
 # Create your views here.
 
@@ -30,6 +31,7 @@ class DetailProductView(generic.DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['comment_form'] = CommentForm()
+        context['add_to_cart_form'] = AddCartProductForm()
         return context
 
 

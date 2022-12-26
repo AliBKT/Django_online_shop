@@ -38,22 +38,28 @@
                                                             </td>
                                                             <td class="product-name wide-column">
                                                                 <h3>
-                                                                    <a href="product-details.html">{{product.title}}</a>
+                                                                    <a href="product-details.html">{{product.product_obj.title}}</a>
                                                                 </h3>
                                                             </td>
                                                             <td class="product-price">
                                                                 <span class="product-price-wrapper">
-                                                                    <span class="money">{{product.price}}</span>
+                                                                    <span class="money">{{product.product_obj.price}}</span>
                                                                 </span>
                                                             </td>
                                                             <td class="product-quantity">
                                                                 <div class="quantity">
-                                                                    <input type="number" class="quantity-input" name="qty" id="qty-1" value="2" min="1">
+                                                                    <input
+                                                                        type="number"
+                                                                        class="quantity-input"
+                                                                        name="qty" 
+                                                                        id="qty-1" 
+                                                                        value="{{product.quantity}}" 
+                                                                        min="1">
                                                                 </div>
                                                             </td>
                                                             <td class="product-total-price">
                                                                 <span class="product-price-wrapper">
-                                                                    <span class="money">۲۹۶,۰۰۰ تومان</span>
+                                                                    <span class="money">{{product.total_price}}</span>
                                                                 </span>
                                                             </td>
                                                         </tr>
@@ -80,7 +86,7 @@
                                                 <span>مجموع</span>
                                             </div>
                                             <div class="cart-calculator__item--value">
-                                                <span>۳۴۶,۰۰۰ تومان</span>
+                                                <span>{{cart.get_total_price}} تومان</span>
                                             </div>
                                         </div>
                                         <div class="cart-calculator__item order-total">
@@ -89,7 +95,7 @@
                                             </div>
                                             <div class="cart-calculator__item--value">
                                                 <span class="product-price-wrapper">
-                                                    <span class="money">۳۴۶,۰۰۰ تومان</span>
+                                                    <span class="money">{{cart.get_total_price}} تومان</span>
                                                 </span>
                                             </div>
                                         </div>
