@@ -68,17 +68,26 @@ class cart:
             yield item
         
     def __len__(self) :
+        
+        # Return len of cart
         return len(self.cart.keys())
     
     def clear(self):
         
+        # Claer all products in cart  
         del self.session['cart']
+        
+        # Save session
         self.save()
     
+    # clac total price
     def get_total_price(self):
         
+        # Get ids of products in cart
         product_ids = self.cart.keys()
         
+        # Get products object which in cart
         products = Product.objects.filter(id__in=product_ids)
         
+        # Sum price of products
         return sum(product.price for product in products)
