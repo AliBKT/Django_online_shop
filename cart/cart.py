@@ -1,6 +1,6 @@
 from products.models import Product
 
-class cart:
+class Cart:
     
     def __init__(self, request):
         # Get request
@@ -10,7 +10,7 @@ class cart:
         self.session = request.session
         
         # Get cart from session
-        cart = self.session['cart']
+        cart = self.session.get('cart')
         
         # If session cart not be created 
         if not cart :
