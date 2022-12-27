@@ -23,7 +23,7 @@ class Cart:
     def add(self, product, quantity=1):
         
         # Get product id 
-        product_id = product.id
+        product_id = str(product.id)
         
         # Add product to cart if not in cart or update quantity
         if product_id not in self.cart :
@@ -37,10 +37,10 @@ class Cart:
     def remove(self, product):
         # Remove product from cart
         
-        product_id = str(product)
+        product_id = str(product.id)
         
         # Remove product_id from cart if product exsist 
-        if product in self.cart :
+        if product_id in self.cart :
             del self.cart[product_id]
             
             # Save session

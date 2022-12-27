@@ -1,9 +1,10 @@
 {% extends "_base.html" %}
+{% load i18n %}
 
 {% block pagetitle %}
+    {% trans "Cart" %}
 {% endblock %}
 
-{% load i18n %}
 {% load static %}
 {% block content %}
 
@@ -32,7 +33,11 @@
                                                 <tbody>
                                                     {% for product in cart %}
                                                         <tr>
-                                                            <td class="product-remove text-left"><a href=""><i class="flaticon flaticon-cross"></i></a></td>
+                                                            <td class="product-remove text-left">
+                                                                <a href="{% url 'cart:cart_remove' product.product_obj.id %}">
+                                                                    <i class="flaticon flaticon-cross"></i>
+                                                                </a>
+                                                            </td>
                                                             <td class="product-thumbnail text-left">
                                                                 <img src="assets/img/products/prod-10-70x88.jpg" alt="Product Thumnail">
                                                             </td>
@@ -48,13 +53,17 @@
                                                             </td>
                                                             <td class="product-quantity">
                                                                 <div class="quantity">
-                                                                    <input
-                                                                        type="number"
-                                                                        class="quantity-input"
+                                                                    <input 
+                                                                        type="number" 
+                                                                        class="quantity-input" 
                                                                         name="qty" 
                                                                         id="qty-1" 
-                                                                        value="{{product.quantity}}" 
-                                                                        min="1">
+                                                                        value={{product.quantity}}
+                                                                        min="1"
+                                                                        max="20"
+                                                                    >
+                                                                    <div class="dec qtybutton">-</div>
+                                                                    <div class="inc qtybutton">+</div>
                                                                 </div>
                                                             </td>
                                                             <td class="product-total-price">

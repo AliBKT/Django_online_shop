@@ -18,7 +18,7 @@ def detail_cart(request):
     
 def add_to_cart(request, product_id):
     
-    # Create object cart 
+    # Get object cart 
     cart = Cart(request=request)
     
     # Get product 
@@ -39,6 +39,19 @@ def add_to_cart(request, product_id):
     
     return redirect('cart:cart_detail')  
        
-       
+def remove_from_cart(request, product_id):
+    
+    # Get object cart
+    cart = Cart(request=request)
+    
+    # Get product
+    product = get_object_or_404(Product, id=product_id)
+    
+    # Remove form cart
+    cart.remove(product=product)
+    
+    print(cart.cart)
+    return redirect('cart:cart_detail')
+           
        
     
