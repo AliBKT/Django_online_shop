@@ -20,16 +20,22 @@ class Cart:
         # Assain cart
         self.cart = cart
     
-    def add(self, product, quantity=1):
+    def add(self, product, quantity=1, replaced_current_quantity=False):
         
         # Get product id 
         product_id = str(product.id)
         
         # Add product to cart if not in cart or update quantity
         if product_id not in self.cart :
-            self.cart[product_id] = {'quantity': quantity}
+            self.cart[product_id] = {'quantity': 0}
+        
+        
+        if replaced_current_quantity :
+            self.cart[product_id]['quantity'] = quantity
         else :
-            self.cart[product_id]['quantity'] += quantity
+            self.cart[product_id]['quantity'] += quantity    
+            
+        
         
         # Save session
         self.save()

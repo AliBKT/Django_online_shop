@@ -12,6 +12,13 @@ def detail_cart(request):
     # Create object cart 
     cart = Cart(request=request)
     
+    # Create form update quantity 
+    for item in cart :
+        item['product_update_quantity_form'] = AddCartProductForm(initial={
+            'quantity' : item['quantity'],
+            'inplace' : True ,
+        })
+    
     return render(request, "cart/cart.html", {
         'cart' : cart
     })
@@ -34,8 +41,11 @@ def add_to_cart(request, product_id):
        # Get quantity from form
        quantity = cleaned_data['quantity']
        
+       # Get inplace from form
+       inplace = cleaned_data['inplace']
+       
        # Add product to cart
-       cart.add(product=product, quantity=quantity)
+       cart.add(product=product, quantity=quantity, replaced_current_quantity=inplace)
     
     return redirect('cart:cart_detail')  
        

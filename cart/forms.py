@@ -7,3 +7,7 @@ class AddCartProductForm(forms.Form):
     
     # Quantity field in from
     quantity = forms.TypedChoiceField(choices=QUANTITY_CHOICES, coerce=int)
+    
+    # Determine whether the quantity should be replaced or updated
+    inplace = forms.BooleanField(required=False, widget=forms.HiddenInput)
+    
