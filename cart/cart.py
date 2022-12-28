@@ -97,4 +97,4 @@ class Cart:
         products = Product.objects.filter(id__in=product_ids)
         
         # Sum price of products
-        return sum(product.price for product in products)
+        return sum((product['product_obj'].price * product['quantity']) for product in self.cart.values())
