@@ -1,12 +1,13 @@
 # Import from django library
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import generic
 from django.shortcuts import get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib import messages
 from django.utils.translation import gettext_lazy as _
+from django.contrib.auth.models import AnonymousUser
 
 # Import from my files
 from .forms import CommentForm
@@ -34,10 +35,11 @@ class DetailProductView(generic.DetailView):
         return context
 
 
-class CommentCreateView(generic.CreateView):
+class CommentCreateView(LoginRequiredMixin, generic.CreateView):
     model = Comment
     form_class = CommentForm
 
+    
     def form_valid(self, form):
         object_to_db = form.save(commit=False)
         object_to_db.author = self.request.user

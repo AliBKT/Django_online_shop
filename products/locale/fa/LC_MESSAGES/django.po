@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-26 16:22-0500\n"
+"POT-Creation-Date: 2022-12-28 11:16-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,26 +46,30 @@ msgstr "نظر"
 msgid "Product detail"
 msgstr "جزئیات محصول"
 
-#: templates/products/DetailProduct.html:48
+#: templates/products/DetailProduct.html:53
 msgid "Add to cart"
 msgstr "اضافه به سبد خرید"
 
-#: templates/products/DetailProduct.html:76
+#: templates/products/DetailProduct.html:75
 msgid "Product description"
 msgstr "جزئیات محصول"
 
-#: templates/products/DetailProduct.html:79
+#: templates/products/DetailProduct.html:78
 msgid "features"
 msgstr "ویژگی ها"
 
-#: templates/products/DetailProduct.html:82
+#: templates/products/DetailProduct.html:81
 msgid "comments"
 msgstr "نظرات"
 
-#: views.py:48
+#: views.py:44
+msgid "!For submit comment you should be login"
+msgstr "برای ثبت نظر باید وارد سایت شوید یا ثبت نام کنید"
+
+#: views.py:51
 msgid "Your comment have inappropriate words"
 msgstr "نظر شما حاوی کلمات ناشایست است!"
 
-#: views.py:50
+#: views.py:53
 msgid "Your comment has been registered successfully"
 msgstr "نظر شما به موفقیت ثبت شد."
