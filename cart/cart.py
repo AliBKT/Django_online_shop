@@ -1,3 +1,6 @@
+from django.contrib import messages
+from django.utils.translation import gettext as _
+
 from products.models import Product
 
 class Cart:
@@ -27,14 +30,16 @@ class Cart:
         
         # Add product to cart if not in cart or update quantity
         if product_id not in self.cart :
-            self.cart[product_id] = {'quantity': 0}
-        
-        
-        if replaced_current_quantity :
+            self.cart[product_id] = {'quantity': quantity}
+            messages.success(self.request, _('The product has been successfully added to the cart'))
+        elif replaced_current_quantity :
             self.cart[product_id]['quantity'] = quantity
+            messages.success(self.request, _('The product number has been changed successfully.'))
         else :
             self.cart[product_id]['quantity'] += quantity    
-            
+            messages.success(self.request, _('Successfully added to cart'))
+        
+        
         
         
         # Save session
@@ -48,7 +53,7 @@ class Cart:
         # Remove product_id from cart if product exsist 
         if product_id in self.cart :
             del self.cart[product_id]
-            
+            messages.success(self.request, _('Successfully removed from cart'))
             # Save session
             self.save()
         
