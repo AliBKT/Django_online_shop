@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-28 09:28-0500\n"
+"POT-Creation-Date: 2022-12-29 01:07-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,11 +22,11 @@ msgstr ""
 msgid "The product has been successfully added to the cart"
 msgstr "محصول با موفقیت به سبد خرید اضافه شد!"
 
-#: cart.py:39
+#: cart.py:37
 msgid "The product number has been changed successfully."
 msgstr "تعداد محصول با موفقیت تغییر یافت!"
 
-#: cart.py:42
+#: cart.py:40
 msgid "Successfully added to cart"
 msgstr "با موفقیت اضافه شد!"
 
@@ -41,3 +41,15 @@ msgstr "سبد خرید"
 #: templates/cart/cart.html:72
 msgid "update"
 msgstr "تغییر"
+
+#: templates/cart/mini_cart.html:33
+msgid "total"
+msgstr "جمع کل"
+
+#: templates/cart/mini_cart.html:37
+msgid "View shopping cart"
+msgstr "مشاهده سبد خرید"
+
+#: templates/cart/mini_cart.html:38
+msgid "Payment"
+msgstr "پرداخت"
