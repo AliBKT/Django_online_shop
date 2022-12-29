@@ -41,7 +41,9 @@
                                                                 </a>
                                                             </td>
                                                             <td class="product-thumbnail text-left">
-                                                                <img src="assets/img/products/prod-10-70x88.jpg">
+                                                                {% if product.product_obj.image %}
+                                                                    <img src={{product.product_obj.image.url}}>
+                                                                {% endif %}
                                                             </td>
                                                             <td class="product-name">
                                                                 <h3>
