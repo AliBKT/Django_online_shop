@@ -7,7 +7,9 @@
 {% load crispy_forms_tags %}
 {% load comment_tags %}
 {% load i18n %}
+{% load humanize %}
 {% load jalali_tags %}
+{% load persion_tarnslation_tags %}
 
 {% block content %}
     <!-- Breadcrumb area Start -->
@@ -40,7 +42,7 @@
                                     {{ Product.description }}
                                 </p>
                                 <div class="my-5 py-5 product-price-wrapper mb--25">
-                                    <span class="money text-success">{{ Product.price }} تومان</span>
+                                    <span class="money text-success">{{ Product.price|commaint|translate_number_english_to_persion}} تومان</span>
                                     <span class="price-separator">-</span>
 {#                                    <span class="money old-price text-danger">۲۱۰,۰۰۰ تومان</span>#}
                                 </div>
@@ -129,7 +131,7 @@
                                                                     <div class="review__meta">
                                                                         <strong class="review__author px-4">{{ comment.author.username }}</strong>
                                                                         <span class="review__dash">-</span>
-                                                                        <span class="review__published-date">{{ comment.datetime_created |to_jalali:'%Y %B %d' }}</span>
+                                                                        <span class="review__published-date">{{ comment.datetime_created |to_jalali:'%Y %B %d'|translate_number_english_to_persion }}</span>
                                                                     </div>
                                                                     <div class="product-rating">
                                                                         <div class="m-0 star-rating star-five">

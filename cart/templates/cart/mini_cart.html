@@ -1,5 +1,6 @@
 {% load i18n %}
-
+{% load humanize %}
+{% load persion_tarnslation_tags %}
     <!-- Mini Cart Start -->
     <aside class="mini-cart" id="miniCart">
         <div class="mini-cart-wrapper">
@@ -25,7 +26,7 @@
                                         </a>
                                     </span>
                                     <span class="mini-cart__product__quantity">
-                                        <span>{{item.product_obj.price}}</span> &#215; <span>۱</span>
+                                        <span>{{item.product_obj.price|intcomma:False|translate_number_english_to_persion}}</span> &#215; <span>۱</span>
                                     </span>
                                 </div>
                             </li>
@@ -33,7 +34,7 @@
                     </ul>
                     <div class="mini-cart__total">
                         <span>{% trans "total" %} </span>
-                        <span class="ammount">{{cart.get_total_price}} {% trans "$" %}</span>
+                        <span class="ammount">{{cart.get_total_price|translate_number_english_to_persion}} {% trans "$" %}</span>
                     </div>
                     <div class="mini-cart__buttons">
                         <a href="cart.html" class="btn btn-fullwidth btn-bg-sand mb--20">{% trans "View shopping cart" %}</a>

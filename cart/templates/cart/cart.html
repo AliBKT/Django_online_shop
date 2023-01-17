@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% load static %}
+{% load persion_tarnslation_tags %}
 {% block content %}
 
 {% block styles_css %}
@@ -52,7 +53,7 @@
                                                             </td>
                                                             <td class="product-price">
                                                                 <span class="product-price-wrapper">
-                                                                    <span class="money">{{product.product_obj.price}}</span>
+                                                                    <span class="money">{{product.product_obj.price|translate_number_english_to_persion}}</span>
                                                                 </span>
                                                             </td>
                                                             <td class="product-quantity">
@@ -76,7 +77,7 @@
                                                             </td>
                                                             <td class="product-total-price">
                                                                 <span class="product-price-wrapper">
-                                                                    <span class="money">{{product.total_price}}</span>
+                                                                    <span class="money">{{product.total_price|translate_number_english_to_persion}}</span>
                                                                 </span>
                                                             </td>
                                                         </tr>
@@ -102,7 +103,7 @@
                                                 <span>مجموع</span>
                                             </div>
                                             <div class="cart-calculator__item--value">
-                                                <span>{{cart.get_total_price}} تومان</span>
+                                                <span>{{cart.get_total_price|translate_number_english_to_persion}} تومان</span>
                                             </div>
                                         </div>
                                         <div class="cart-calculator__item order-total">
@@ -111,7 +112,7 @@
                                             </div>
                                             <div class="cart-calculator__item--value">
                                                 <span class="product-price-wrapper">
-                                                    <span class="money">{{cart.get_total_price}} تومان</span>
+                                                    <span class="money">{{cart.get_total_price|translate_number_english_to_persion}} تومان</span>
                                                 </span>
                                             </div>
                                         </div>
