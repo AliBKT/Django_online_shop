@@ -15,6 +15,7 @@ from .models import Product, Comment
 from .comment.filter import check_comment
 from cart.forms import AddCartProductForm
 
+
 # Create your views here.
 
 
@@ -39,17 +40,16 @@ class CommentCreateView(LoginRequiredMixin, generic.CreateView):
     model = Comment
     form_class = CommentForm
 
-    
     def form_valid(self, form):
         object_to_db = form.save(commit=False)
         object_to_db.author = self.request.user
         object_to_db.active = check_comment(object_to_db.body)
 
-        if object_to_db.active == False :
+        if not object_to_db.active:
             messages.error(self.request, _('Your comment have inappropriate words'))
-        else :
+        else:
             messages.success(self.request, _('Your comment has been registered successfully'))
-        
+
         product_id = int(self.kwargs['product_id'])
         product = get_object_or_404(Product, id=product_id)
 

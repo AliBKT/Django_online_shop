@@ -52,8 +52,8 @@
                                                                 </h3>
                                                             </td>
                                                             <td class="product-price">
-                                                                <span class="product-price-wrapper">
-                                                                    <span class="money">{{product.product_obj.price|translate_number_english_to_persion}}</span>
+                                                                <span class="product-price-wrapper" dir="ltr">
+                                                                    <span class="money">{{product.product_obj.price|commaint|translate_number_english_to_persion}}</span>
                                                                 </span>
                                                             </td>
                                                             <td class="product-quantity">
@@ -76,8 +76,8 @@
                                                             </form>
                                                             </td>
                                                             <td class="product-total-price">
-                                                                <span class="product-price-wrapper">
-                                                                    <span class="money">{{product.total_price|translate_number_english_to_persion}}</span>
+                                                                <span class="product-price-wrapper" dir="ltr">
+                                                                    <span class="money">{{product.total_price|translate_number_english_to_persion|commaint}}</span>
                                                                 </span>
                                                             </td>
                                                         </tr>
@@ -102,8 +102,8 @@
                                             <div class="cart-calculator__item--head">
                                                 <span>مجموع</span>
                                             </div>
-                                            <div class="cart-calculator__item--value">
-                                                <span>{{cart.get_total_price|translate_number_english_to_persion}} تومان</span>
+                                            <div class="cart-calculator__item--value" dir="ltr">
+                                                <span>{{cart.get_total_price|commaint|translate_number_english_to_persion}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{% trans '$' %}</span>
                                             </div>
                                         </div>
                                         <div class="cart-calculator__item order-total">
@@ -111,8 +111,9 @@
                                                 <span>جمع کل</span>
                                             </div>
                                             <div class="cart-calculator__item--value">
-                                                <span class="product-price-wrapper">
-                                                    <span class="money">{{cart.get_total_price|translate_number_english_to_persion}} تومان</span>
+                                                <span class="product-price-wrapper" dir="ltr">
+                                                    <span class="money">{{cart.get_total_price|commaint|translate_number_english_to_persion}} </span>
+                                                    <span class="money">{% trans '$' %}</span>
                                                 </span>
                                             </div>
                                         </div>

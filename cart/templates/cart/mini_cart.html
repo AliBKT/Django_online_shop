@@ -25,16 +25,16 @@
                                             &#10060;
                                         </a>
                                     </span>
-                                    <span class="mini-cart__product__quantity">
+                                    <span class="mini-cart__product__quantity" dir="ltr">
                                         <span>{{item.product_obj.price|intcomma:False|translate_number_english_to_persion}}</span> &#215; <span>۱</span>
                                     </span>
                                 </div>
                             </li>
                         {% endfor %}
                     </ul>
-                    <div class="mini-cart__total">
+                    <div class="mini-cart__total" dir="ltr">
                         <span>{% trans "total" %} </span>
-                        <span class="ammount">{{cart.get_total_price|translate_number_english_to_persion}} {% trans "$" %}</span>
+                        <span class="ammount">{{cart.get_total_price|commaint|translate_number_english_to_persion}} {% trans "$" %}</span>
                     </div>
                     <div class="mini-cart__buttons">
                         <a href="cart.html" class="btn btn-fullwidth btn-bg-sand mb--20">{% trans "View shopping cart" %}</a>

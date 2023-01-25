@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-28 11:16-0500\n"
+"POT-Creation-Date: 2023-01-24 13:05+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,58 +18,65 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: models.py:32
+#: models.py:14
+msgid "Cover"
+msgstr ""
+
+#: models.py:33
 msgid "Very bad"
 msgstr "خیلی بد"
 
-#: models.py:33
+#: models.py:34
 msgid "Bad"
 msgstr "بد"
 
-#: models.py:34
+#: models.py:35
 msgid "Normal"
 msgstr "معمولی"
 
-#: models.py:35
+#: models.py:36
 msgid "Good"
 msgstr "خوب"
 
-#: models.py:36
+#: models.py:37
 msgid "Perfect"
 msgstr "عالی"
 
-#: models.py:40
+#: models.py:41
 msgid "comment"
 msgstr "نظر"
 
-#: templates/products/DetailProduct.html:18
+#: templates/products/DetailProduct.html:21
 msgid "Product detail"
 msgstr "جزئیات محصول"
 
-#: templates/products/DetailProduct.html:53
+#: templates/products/DetailProduct.html:45
+msgid "$"
+msgstr "تومان"
+
+#: templates/products/DetailProduct.html:61
 msgid "Add to cart"
 msgstr "اضافه به سبد خرید"
 
-#: templates/products/DetailProduct.html:75
+#: templates/products/DetailProduct.html:83
 msgid "Product description"
 msgstr "جزئیات محصول"
 
-#: templates/products/DetailProduct.html:78
+#: templates/products/DetailProduct.html:86
 msgid "features"
 msgstr "ویژگی ها"
 
-#: templates/products/DetailProduct.html:81
+#: templates/products/DetailProduct.html:89
 msgid "comments"
 msgstr "نظرات"
 
-#: views.py:44
-msgid "!For submit comment you should be login"
-msgstr "برای ثبت نظر باید وارد سایت شوید یا ثبت نام کنید"
-
-#: views.py:51
+#: views.py:49
 msgid "Your comment have inappropriate words"
 msgstr "نظر شما حاوی کلمات ناشایست است!"
 
-#: views.py:53
+#: views.py:51
 msgid "Your comment has been registered successfully"
 msgstr "نظر شما به موفقیت ثبت شد."
+
+#~ msgid "!For submit comment you should be login"
+#~ msgstr "برای ثبت نظر باید وارد سایت شوید یا ثبت نام کنید"
