@@ -2,13 +2,14 @@ from django.db import models
 from django.shortcuts import reverse
 from django.contrib.auth import get_user_model
 from django.utils.translation import gettext_lazy as _
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 
 
 class Product(models.Model):
     title = models.CharField(max_length=200)
-    description = models.TextField()
+    description = RichTextField()
     price = models.PositiveIntegerField(default=0)
     active = models.BooleanField(default=True)
     image = models.ImageField(blank=True, verbose_name=_("Cover"), upload_to="products/product_image")
