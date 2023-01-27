@@ -58,7 +58,8 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'products.apps.ProductsConfig',
     'cart.apps.CartConfig',
-    'persion_translations',
+    'persion_translations.apps.PersionTranslationsConfig',
+    'orders.apps.OrdersConfig',
     
 ]
 
