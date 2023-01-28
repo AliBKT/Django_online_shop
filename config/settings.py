@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'jalali_date',
     'ckeditor',
+    'rosetta',
 
     # My installed app
     'accounts.apps.AccountsConfig',
