@@ -89,7 +89,10 @@
                                 </div>
                                 <div class="row no-gutters border-top pt--20 mt--20">
                                     <div class="col-sm-6 text-sm-right">
-                                        <button type="submit" class="cart-form__btn">خالی کردن سبد خرید</button>
+                                        <form action="{% url 'cart:cart_clear' %}" method="post">
+                                            {% csrf_token %}
+                                            <button type="submit" class="cart-form__btn">خالی کردن سبد خرید</button>
+                                        </form>
                                     </div>
                                 </div>
                         </div>
@@ -119,7 +122,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="checkout.html" class="btn btn-fullwidth btn-bg-red btn-color-white btn-hover-2">
+                                <a href={% url 'order:create_order' %} class="btn btn-fullwidth btn-bg-red btn-color-white btn-hover-2">
                                     ثبت سفارش
                                 </a>
                             </div>

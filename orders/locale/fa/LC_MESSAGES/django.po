@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-29 11:04+0330\n"
-"PO-Revision-Date: 2023-01-29 11:08+0330\n"
+"POT-Creation-Date: 2023-01-31 00:00+0330\n"
+"PO-Revision-Date: 2023-01-31 00:01+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -68,15 +68,39 @@ msgid "Quantity"
 msgstr "تعداد"
 
 #: models.py:30
-#| msgid "Total Price"
 msgid "Price"
 msgstr "قیمت"
 
-#: templates/orders/order_create.html:99
-#: templates/orders/order_create.html:107
+#: templates/orders/order_create.html:74
+msgid "Submit"
+msgstr "ثبت سفارش"
+
+#: templates/orders/order_create.html:81
+msgid "Your order"
+msgstr "سفارش شما"
+
+#: templates/orders/order_create.html:88
+#: templates/orders/order_create.html:104
+msgid "Total Price"
+msgstr "قیمت کل"
+
+#: templates/orders/order_create.html:97
+#: templates/orders/order_create.html:105
 msgid "$"
 msgstr "تومان"
 
-#: templates/orders/order_create.html:106
-msgid "Total Price"
-msgstr "قیمت کل"
+#: templates/orders/order_create.html:111
+msgid "Payment Method"
+msgstr "روش پرداخت"
+
+#: templates/orders/order_create.html:116
+msgid "Zarin Pal online portal"
+msgstr "درگاه آنلاین زرین پال"
+
+#: views.py:17
+msgid "You can not proceed to checkout page because your cart is empty ! "
+msgstr "شما نمی توانید به صفحه پرداخت بروید زیرا سبد خرید شما خالی است!"
+
+#: views.py:36
+msgid "Your order has been successfully placed"
+msgstr "سفارش شما با موفقیت انجام شد."

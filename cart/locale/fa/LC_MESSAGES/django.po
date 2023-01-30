@@ -8,15 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-29 12:26-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2023-01-31 00:59+0330\n"
+"PO-Revision-Date: 2023-01-31 01:00+0330\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
 
 #: cart.py:34
 msgid "The product has been successfully added to the cart"
@@ -38,22 +39,32 @@ msgstr "با موفقیت از سبد خرید حذف شد!"
 msgid "Cart"
 msgstr "سبد خرید"
 
-#: templates/cart/cart.html:74
+#: templates/cart/cart.html:75
 msgid "update"
 msgstr "تغییر"
 
-#: templates/cart/mini_cart.html:35
-msgid "total"
-msgstr "جمع کل"
-
-#: templates/cart/mini_cart.html:35
+#: templates/cart/cart.html:109 templates/cart/cart.html:119
+#: templates/cart/mini_cart.html:37
 msgid "$"
 msgstr "تومان"
 
-#: templates/cart/mini_cart.html:39
+#: templates/cart/mini_cart.html:36
+msgid "total"
+msgstr "جمع کل"
+
+#: templates/cart/mini_cart.html:40
 msgid "View shopping cart"
 msgstr "مشاهده سبد خرید"
 
-#: templates/cart/mini_cart.html:40
+#: templates/cart/mini_cart.html:41
 msgid "Payment"
 msgstr "پرداخت"
+
+#: views.py:76
+#| msgid "Successfully removed from cart"
+msgid "All products successfully removed from cart"
+msgstr "سبد خرید با موفقیت خالی شد!"
+
+#: views.py:78
+msgid "Your cart is already empty"
+msgstr "سبد خرید شما خالی است!"
