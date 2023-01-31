@@ -51,7 +51,7 @@ def add_to_cart(request, product_id):
         # Add product to cart
         cart.add(product=product, quantity=quantity, replaced_current_quantity=inplace)
 
-    return redirect('cart:cart_detail')
+    return redirect('product:list_products')
 
 
 def remove_from_cart(request, product_id):

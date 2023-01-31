@@ -38,7 +38,9 @@
                     </div>
                     <div class="mini-cart__buttons">
                         <a href="{% url 'cart:cart_detail' %}" class="btn btn-fullwidth btn-bg-sand mb--20">{% trans "View shopping cart" %}</a>
-                        <a href="{% url 'order:create_order' %}" class="btn btn-fullwidth btn-bg-sand">{% trans "Payment" %}</a>
+                        {% if not cart.is_empty %}
+                            <a href="{% url 'order:create_order' %}" class="btn btn-fullwidth btn-bg-sand">{% trans "Payment" %}</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
